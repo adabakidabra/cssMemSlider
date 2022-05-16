@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(0, 60, 92);
+}
+
+.slider {
+    width: 1200px;
+    height: 600px;
+    overflow: hidden;
+    border: solid 2px cadetblue;
+    border-radius: 20px;
+    margin: 50px auto;
+}
+
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all .6s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.bar {
+    height: 8px;
+    width: 20px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: crimson;
+    opacity: .5;
+    border-radius: 4px;
+    transition: all .5s ease;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+.labele:hover .bar {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav_and_text {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+.labele {
+    height: 15px;
+    width: 20px;
+    display: contents;
+}
